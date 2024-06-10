@@ -130,27 +130,26 @@ namespace ConsoleApp4
             return 0.5 *(a_base + b_base)*height;
         }
 
-        public void Result(int choice){
+        public bool Result(int choice){
+            
             switch (choice){
                 case 1:
                     Console.WriteLine("Trapeziod Area : {0}",TrapeziodArea(GetA_base(), GetB_base(), GetHeight()));
-                    break;
+                    return false;
                 case 2:
                     Console.WriteLine("Square Area : {0}",SquareArea(GetRadius()));
-                    break;
+                    return false;
                 case 3:
                     Console.WriteLine("Triangle Area : {0}",TriangleArea(GetHeight(),GetBases()));
-                    break;
+                    return false;
                 case 4:
                     Console.WriteLine("Circle Area : {0}",CircleArea(GetRadius()));
-                    break;
+                    return false;
                 default:
                     System.Console.WriteLine("Invalid Choice");
-                    break;
-               
-
-
+                    return true;
             }
+                
            
         }
 

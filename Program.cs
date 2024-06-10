@@ -17,13 +17,11 @@ namespace ConsoleApp4
             bool looper = true;
             Shape shape =  new Shape();
             
-            Console.WriteLine("Please select a shape \n 1. Tripezium \n 2. Square \n 3. Triangle \n 4. Circle \n 5. Rectangle");
-            int input = int.Parse(Console.ReadLine());
-      
-           
+            while (looper){
 
-            do
-            {
+                Console.WriteLine("Please select a shape \n 1. Tripezium \n 2. Square \n 3. Triangle \n 4. Circle ");
+                int input = int.Parse(Console.ReadLine());
+           
                 switch (input)
                 {
                     case 1:
@@ -35,23 +33,29 @@ namespace ConsoleApp4
                          shape.SetBases(double.Parse(Console.ReadLine()));
                          Console.WriteLine("Please enter the tripezium height value   : ");
                          shape.SetHeight(double.Parse(Console.ReadLine()));
-
-                        
                          
                          break;
                     case 2:
                          Console.WriteLine("Please enter the square side value : ");
                          shape.SetRadius(double.Parse(Console.ReadLine()));
                         break;
-                         
-
-
-
+                    case 3:
+                        Console.WriteLine("Please enter the triangle base value");
+                        shape.SetBases(double.Parse((Console.ReadLine())));
+                        Console.WriteLine("Please enter the triangle height value");
+                        shape.SetHeight(double.Parse(Console.ReadLine()));
+                        break;
+                    case 4:
+                        Console.WriteLine("Please enter the circle radius value");
+                        shape.SetRadius(double.Parse(Console.ReadLine()));
+                        break;
+                    
                     default:
                     break;
                 }
 
-
+                looper = shape.Result(input);
+            }
 
                 // if (shape == 1)
                 // {
@@ -131,7 +135,7 @@ namespace ConsoleApp4
 
                 // }
 
-            }while (looper);
+           
         }
     
     }
