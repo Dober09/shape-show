@@ -38,7 +38,7 @@ namespace ConsoleApp4
 
         public override double Area() =>  2 * base.pi * Math.Pow(base.x, 2);
 
-        public override string ToString() => $"Circle Area: {Area()} ";
+        public override string ToString() => $"Circle Area: {Area():F2} ";
 
     }
 
@@ -51,7 +51,7 @@ namespace ConsoleApp4
 
         public override double Area() => 0.5 * base.x * base.y;
 
-        public override string ToString() => $"Triangle Area: {Area()} ";
+        public override string ToString() => $"Triangle Area: {Area():F2} ";
     }
 
 
@@ -62,7 +62,7 @@ namespace ConsoleApp4
 
         public override double Area() =>  base.x * base.x;
 
-        public override string ToString() => $"Square Area: {Area()} ";
+        public override string ToString() => $"Square Area: {Area():F2} ";
 
     }
 

@@ -24,7 +24,7 @@ namespace ConsoleApp4
             while (looper)
             {
 
-                Console.WriteLine("Please select a shape \n 1.Square \n 2. Triangle \n 3. Circle ");
+                Console.WriteLine("Please select a shape \n1 .Square \n2. Triangle \n3. Circle ");
                 int input = int.Parse(Console.ReadLine());
 
 
@@ -35,7 +35,7 @@ namespace ConsoleApp4
                         Console.WriteLine("Please enter the square side value : ");
                     
                         Square square = new (double.Parse(Console.ReadLine()));
-                        Console.WriteLine(square);
+                        Console.WriteLine(square.ToString());
                         looper = !looper;
                         break;
                     case 2:
@@ -45,17 +45,18 @@ namespace ConsoleApp4
                         double height_2 =(double.Parse(Console.ReadLine()));
                         
                         Triangle triangle = new (bases, height_2);
-                        Console.WriteLine(triangle);
+                        Console.WriteLine(triangle.ToString());
                         looper = !looper;
                         break;
                     case 3:
                         Console.WriteLine("Please enter the circle radius value");
                         Circle circle = new ((double.Parse(Console.ReadLine())));
-                        Console.WriteLine(circle);
+                        Console.WriteLine(circle.ToString());
                         looper = !looper;
                         break;
 
                     default:
+                        Console.WriteLine("Enter the correct choose.");
                         break;
                 }
 
